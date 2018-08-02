@@ -1,16 +1,8 @@
-
-provider "aws" {
-  access_key = "${var.aws_access_key}"
-  secret_key = "${var.aws_secret_key}"
-  region     = "${var.aws_default_region}"
-}
-
 resource "aws_s3_bucket" "static_site" {
   bucket = "${var.bucket_name}"
   acl    = "public-read"
 
   website {
-    // DO NOT CHANGE THESE, PLEASE
     index_document = "index.html"
     error_document = "error.html"
   }
