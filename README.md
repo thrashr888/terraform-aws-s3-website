@@ -30,7 +30,7 @@ provider "aws" {
 
 module "s3-website" {
   source  = "thrashr888/s3-website/aws"
-  version = "0.1.0"
+  version = "0.2.0"
 
   bucket_name = "example-website"
 }
